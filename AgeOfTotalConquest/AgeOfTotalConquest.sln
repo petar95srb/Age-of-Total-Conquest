@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeOfTotalConquest", "AgeOfTotalConquest\AgeOfTotalConquest.csproj", "{7E2D56DF-6FAF-4B33-A2BF-B4FFE0D34838}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOTC_DataLayer", "AOTC_DataLayer\AOTC_DataLayer.csproj", "{078218C1-C3F4-4B07-AA86-AE31B58601CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOTC_DomainClasses", "AOTC_DomainClasses\AOTC_DomainClasses.csproj", "{B842B116-2E93-4000-81EF-30F74E34C2CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7E2D56DF-6FAF-4B33-A2BF-B4FFE0D34838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E2D56DF-6FAF-4B33-A2BF-B4FFE0D34838}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E2D56DF-6FAF-4B33-A2BF-B4FFE0D34838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078218C1-C3F4-4B07-AA86-AE31B58601CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078218C1-C3F4-4B07-AA86-AE31B58601CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078218C1-C3F4-4B07-AA86-AE31B58601CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078218C1-C3F4-4B07-AA86-AE31B58601CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B842B116-2E93-4000-81EF-30F74E34C2CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B842B116-2E93-4000-81EF-30F74E34C2CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B842B116-2E93-4000-81EF-30F74E34C2CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B842B116-2E93-4000-81EF-30F74E34C2CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

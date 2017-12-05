@@ -1,0 +1,14 @@
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\AOTC_DataLayer.dll.config
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\AOTC_DataLayer.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\AOTC_DataLayer.pdb
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\AOTC_DomainClasses.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\AOTC_DomainClasses.pdb
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\AOTC_DomainClasses.dll.config
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\obj\Debug\AOTC_DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\obj\Debug\AOTC_DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\obj\Debug\AOTC_DataLayer.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DataLayer\obj\Debug\AOTC_DataLayer.pdb

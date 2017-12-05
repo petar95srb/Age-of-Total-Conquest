@@ -13,6 +13,20 @@ namespace AgeOfTotalConquest
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            routes.MapRoute(
+                name:"User",
+                url: "user/{id}",
+                defaults: new{controller = "Registration", action = "User" });
+
+
+
+            routes.MapRoute(
+                name: "Registration",
+                url: "registration/{username}/{email}/{password}",
+                defaults: new { controller = "Registration", action = "SingUp" });
+
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

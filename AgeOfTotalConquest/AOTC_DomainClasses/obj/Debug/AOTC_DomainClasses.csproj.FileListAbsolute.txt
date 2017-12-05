@@ -1,0 +1,11 @@
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\AOTC_DomainClasses.dll.config
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\AOTC_DomainClasses.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\AOTC_DomainClasses.pdb
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\EntityFramework.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\EntityFramework.xml
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.csprojResolveAssemblyReference.cache
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.csproj.CoreCompileInputs.cache
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.pdb

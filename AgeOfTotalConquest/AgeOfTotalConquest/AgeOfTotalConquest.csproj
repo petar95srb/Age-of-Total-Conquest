@@ -159,21 +159,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AgeOfTotalConquestDB.cs" />
-    <Compile Include="Models\Boost.cs" />
-    <Compile Include="Models\FriendRequest.cs" />
-    <Compile Include="Models\Friendship.cs" />
-    <Compile Include="Models\Message.cs" />
-    <Compile Include="Models\Reinforcement.cs" />
-    <Compile Include="Models\Unit.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserBoost.cs" />
-    <Compile Include="Models\UserReinforcement.cs" />
-    <Compile Include="Models\UserStat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -213,9 +203,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Registration\SingUp.cshtml" />
+    <Content Include="Views\Registration\User.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -229,6 +222,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AOTC_DataLayer\AOTC_DataLayer.csproj">
+      <Project>{078218c1-c3f4-4b07-aa86-ae31b58601ce}</Project>
+      <Name>AOTC_DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AOTC_DomainClasses\AOTC_DomainClasses.csproj">
+      <Project>{b842b116-2e93-4000-81ef-30f74e34c2cb}</Project>
+      <Name>AOTC_DomainClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
