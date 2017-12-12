@@ -34,6 +34,8 @@ namespace AgeOfTotalConquest.Controllers
 
             return View();
         }
+
+       
        
     }
 }

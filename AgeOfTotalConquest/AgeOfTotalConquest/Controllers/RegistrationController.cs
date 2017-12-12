@@ -20,11 +20,50 @@ namespace AgeOfTotalConquest.Controllers
             return View();
         }
 
-        public ActionResult User(string id)
+        public ActionResult UserModel(string id)
         {
-           var model = db.Users.Find(id);
+           User u = db.Users.Find(id);
+            var model  = new Models.UserModel
+            {
+                Username = u.Username,
+                Email = u.Email,
+                Password = u.Password,
+                Stat = u.UserStat,
+                Messages = db.Messages.Where(m => m.ReceiverId.Equals(id) || m.UserId.Equals(id)).ToList(),
+                Friends = db.Friendships.Where(f => f.UserId.Equals(id)).Select(f => f.Friend).ToList(),
+                Boosts = db.UserBoosts.Where(ub => ub.Username.Equals(id)).Select(ub => ub.Boost).ToList(),
+                Reinforcements  = db.UserReinforcements.Where(x=>x.Username.Equals(id)).Select(x=>x.Reinforcement).ToList()
+                
+            };
 
-           return View(model);
+            return View(model);
+
+        }
+
+        public JsonResult User(string id)
+        {
+
+            User u = db.Users.Find(id);
+            var model = Json(new Models.UserModel
+            {
+                Username = u.Username,
+                Email = u.Email,
+                Password = u.Password,
+                Stat = u.UserStat,
+                Messages = db.Messages.Where(m => m.ReceiverId.Equals(id) || m.UserId.Equals(id)).ToList(),
+                Friends = db.Friendships.Where(f => f.UserId.Equals(id)).Select(f => f.Friend).ToList(),
+                Boosts = db.UserBoosts.Where(ub => ub.Username.Equals(id)).Select(ub => ub.Boost).ToList(),
+                Reinforcements = db.UserReinforcements.Where(x => x.Username.Equals(id)).Select(x => x.Reinforcement).ToList()
+
+            });
+
+         
+          
+
+
+
+            return model;
+
         }
 
         

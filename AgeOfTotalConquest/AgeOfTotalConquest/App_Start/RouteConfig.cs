@@ -19,6 +19,20 @@ namespace AgeOfTotalConquest
                 url: "user/{id}",
                 defaults: new{controller = "Registration", action = "User" });
 
+            routes.MapRoute
+                (
+                name:"UserModel",
+                url:"usermodel/{id}",
+                defaults: new {controller = "Registration", action = "UserModel" }
+                );
+
+
+            routes.MapRoute
+                (
+                name:"Units",
+                url:"units",
+                defaults: new { controller = "Home", action = "Units" });
+
 
 
             routes.MapRoute(
