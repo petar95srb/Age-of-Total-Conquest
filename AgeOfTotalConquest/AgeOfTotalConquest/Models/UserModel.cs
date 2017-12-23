@@ -11,6 +11,7 @@ namespace AgeOfTotalConquest.Models
         public string Username { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+		public byte[] Avatar { get; set;}
         public UserStat Stat { get; set; }
         public List<Unit> Units { get; set; } 
         public List<Boost>  Boosts { get; set; }
