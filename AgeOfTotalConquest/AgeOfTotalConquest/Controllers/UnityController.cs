@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using AgeOfTotalConquest.UnityClasses;
 using AgeOfTotalConquest.AOTC_DomainClasses;
 
 namespace AgeOfTotalConquest.Controllers
@@ -16,11 +15,11 @@ namespace AgeOfTotalConquest.Controllers
         {
             User u = db.Users.Find(id);
 
-            UntUserStat stat = new UntUserStat();
+            UnityClasses.UserStat stat = new UnityClasses.UserStat();
             stat.Win = u.UserStat.Victories;
             stat.Loss = u.UserStat.Losses;
 
-            var model = Json(new UntUser
+            var model = Json(new UnityClasses.User
             {
                 Username = u.Username,
                 Email = u.Email,
@@ -39,7 +38,7 @@ namespace AgeOfTotalConquest.Controllers
             Boost b = db.Boosts.Find(id);
 
             var model = Json(
-                new UntBoost {
+                new UnityClasses.Boost {
                     Id = b.Id,
                     Name = b.Name,
                     Price = b.Price
@@ -55,7 +54,7 @@ namespace AgeOfTotalConquest.Controllers
             Reinforcement r = db.Reinforcements.Find(id);
 
             var model = Json(
-                new UntReinforcement
+                new UnityClasses.Reinforcement
                 {
                     Id = r.Id,
                     UnitName = r.UnitName,
@@ -72,7 +71,7 @@ namespace AgeOfTotalConquest.Controllers
             Unit u = db.Units.Find(id);
 
             var model = Json(
-                new UntUnit
+                new UnityClasses.Unit
                 {
 
                     Name = u.Name,
@@ -90,12 +89,12 @@ namespace AgeOfTotalConquest.Controllers
 
         public JsonResult UnitReinforcement(string username)
         {
-            IQueryable<UserReinforcement> ur = db.UserReinforcements.Where(x => x.Username.Equals(username));
-            List<UntUserReinforcement> UntUr = new List<UntUserReinforcement>();
+            IQueryable<AOTC_DomainClasses.UserReinforcement> ur = db.UserReinforcements.Where(x => x.Username.Equals(username));
+            List<UnityClasses.UserReinforcement> UntUr = new List<UnityClasses.UserReinforcement>();
 
-            foreach (UserReinforcement x in ur)
+            foreach (AOTC_DomainClasses.UserReinforcement x in ur)
             {
-                UntUserReinforcement y = new UntUserReinforcement
+                UnityClasses.UserReinforcement y = new UnityClasses.UserReinforcement
                 {
 
                     Id = x.Id,
@@ -117,12 +116,12 @@ namespace AgeOfTotalConquest.Controllers
 
         public JsonResult UserBoost(string username)
         {
-            IQueryable<UserBoost> ub = db.UserBoosts.Where(x => x.Username.Equals(username));
-            List<UntUserBoost> UntUb = new List<UntUserBoost>();
+            IQueryable<AOTC_DomainClasses.UserBoost> ub = db.UserBoosts.Where(x => x.Username.Equals(username));
+            List<UnityClasses.UserBoost> UntUb = new List<UnityClasses.UserBoost>();
 
-            foreach (UserBoost x in ub)
+            foreach (AOTC_DomainClasses.UserBoost x in ub)
             {
-                UntUserBoost y = new UntUserBoost
+                UnityClasses.UserBoost y = new UnityClasses.UserBoost
                 {
                     Id = x.Id,
                     Username = x.Username,
@@ -134,6 +133,22 @@ namespace AgeOfTotalConquest.Controllers
             }
 
             return Json(UntUb);
+        }
+
+
+        public JsonResult UserMessage(string id)
+        {
+
+            IQueryable<Message> msgs = db.Messages.Where(m => m.UserId.Equals(id));
+            msgs.OrderBy(m => m.Date, );
+
+            List<Message> MSGS = new List<Message>();
+            foreach (Message m in msgs)
+            {
+                MSGS.Add(m);
+            }
+
+
         }
 
         

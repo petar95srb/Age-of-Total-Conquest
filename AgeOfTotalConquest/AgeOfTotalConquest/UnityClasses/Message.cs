@@ -5,7 +5,10 @@ using System.Web;
 
 namespace AgeOfTotalConquest.UnityClasses
 {
-    public class UntMessage
+    public class Message
     {
+        public String SenderId { get; set; }
+        public String ReceiverId { get; set; }
+        public String Content { get; set; }
     }
 }

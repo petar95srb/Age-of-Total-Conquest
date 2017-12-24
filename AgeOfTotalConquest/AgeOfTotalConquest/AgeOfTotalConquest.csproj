@@ -167,14 +167,14 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnityClasses\UntBoost.cs" />
-    <Compile Include="UnityClasses\UntMessage.cs" />
-    <Compile Include="UnityClasses\UntReinforcement.cs" />
-    <Compile Include="UnityClasses\UntUnit.cs" />
-    <Compile Include="UnityClasses\UntUser.cs" />
-    <Compile Include="UnityClasses\UntUserBoost.cs" />
-    <Compile Include="UnityClasses\UntUserReinforcement.cs" />
-    <Compile Include="UnityClasses\UntUserStat.cs" />
+    <Compile Include="UnityClasses\Boost.cs" />
+    <Compile Include="UnityClasses\Message.cs" />
+    <Compile Include="UnityClasses\Reinforcement.cs" />
+    <Compile Include="UnityClasses\Unit.cs" />
+    <Compile Include="UnityClasses\User.cs" />
+    <Compile Include="UnityClasses\UserBoost.cs" />
+    <Compile Include="UnityClasses\UserReinforcement.cs" />
+    <Compile Include="UnityClasses\UserStat.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

@@ -5,11 +5,11 @@ using System.Web;
 
 namespace AgeOfTotalConquest.UnityClasses
 {
-    public class UntUser
+    public class User
     {
         public string Username { get; set; }
         public string Email { get; set; }
         public byte[] Avatar { get; set; }
-        public UntUserStat Stat {get; set;}
+        public UserStat Stat {get; set;}
     }
 }

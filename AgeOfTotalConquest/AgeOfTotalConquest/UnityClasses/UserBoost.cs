@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AgeOfTotalConquest.UnityClasses
 {
-    public class UntUserBoost
+    public class UserBoost
     {
 
         public Guid Id { get; set; }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AgeOfTotalConquest.UnityClasses
 {
-    public class UntUnit
+    public class Unit
     {
         public string Name { get; set; }
         public string Type { get; set; }
