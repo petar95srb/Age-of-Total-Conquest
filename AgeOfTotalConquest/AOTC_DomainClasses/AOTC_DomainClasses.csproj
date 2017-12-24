@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Boost.cs" />
+    <Compile Include="ForrenKey.cs" />
     <Compile Include="FriendRequest.cs" />
     <Compile Include="Friendship.cs" />
     <Compile Include="Message.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="UserBoost.cs" />
     <Compile Include="UserReinforcement.cs" />
     <Compile Include="UserStat.cs" />
+    <Compile Include="UserUnits.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

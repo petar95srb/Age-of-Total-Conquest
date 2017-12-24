@@ -9,3 +9,14 @@ C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_
 C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.csproj.CoreCompileInputs.cache
 C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.dll
 C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.pdb
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\AOTC_DomainClasses.dll.config
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\AOTC_DomainClasses.dll
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\AOTC_DomainClasses.pdb
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\EntityFramework.dll
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\EntityFramework.xml
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.csprojResolveAssemblyReference.cache
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.csproj.CoreCompileInputs.cache
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.dll
+D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.pdb

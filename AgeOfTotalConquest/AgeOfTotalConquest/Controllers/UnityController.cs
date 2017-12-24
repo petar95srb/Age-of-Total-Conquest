@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AgeOfTotalConquest.AOTC_DomainClasses;
+using AOTC_DomainClasses;
 
 namespace AgeOfTotalConquest.Controllers
 {
@@ -13,7 +14,7 @@ namespace AgeOfTotalConquest.Controllers
         // GET: Unity
         public JsonResult User(string id)
         {
-            User u = db.Users.Find(id);
+            AOTC_DomainClasses.User u = db.Users.Find(id);
 
             UnityClasses.UserStat stat = new UnityClasses.UserStat();
             stat.Win = u.UserStat.Victories;
@@ -35,7 +36,7 @@ namespace AgeOfTotalConquest.Controllers
 
         public JsonResult Boost(int id)
         {
-            Boost b = db.Boosts.Find(id);
+            AOTC_DomainClasses.Boost b = db.Boosts.Find(id);
 
             var model = Json(
                 new UnityClasses.Boost {
@@ -51,7 +52,7 @@ namespace AgeOfTotalConquest.Controllers
 
         public JsonResult Reinforcement(int id)
         {
-            Reinforcement r = db.Reinforcements.Find(id);
+            AOTC_DomainClasses.Reinforcement r = db.Reinforcements.Find(id);
 
             var model = Json(
                 new UnityClasses.Reinforcement
@@ -105,10 +106,6 @@ namespace AgeOfTotalConquest.Controllers
                 };
                 UntUr.Add(y);
             }
-
-
-
-
             return Json(UntUr);
 
         }
@@ -150,8 +147,36 @@ namespace AgeOfTotalConquest.Controllers
 
 
         }
+        [HttpPost]
+        public JsonResult Login(AgeOfTotalConquest.UnityClasses.LoginUser user)
+        {
+            if (user.UserName.Length <= 0 || user.Password.Length <= 0)
+                return Json("ERROR");
 
-        
+            var userName = db.Users.Find(user.UserName);
+
+            if (userName == null || userName.Password != user.Password)
+                return Json("Wrong Password");
+
+            AgeOfTotalConquest.UnityClasses.ForrenKey key = AgeOfTotalConquest.UnityClasses.ForrenKey.GenerateCode(100);
+
+            ForrenKey forrenKey = new ForrenKey { id = key.key, userName = user.UserName };
+            db.ForrenKey.Add(forrenKey);
+
+            return Json(key);
+        }
+
+        [HttpGet]
+        public JsonResult LogOut(AgeOfTotalConquest.UnityClasses.ForrenKey key)
+        {
+            var userName = db.ForrenKey.Find(key.key);
+            if (userName == null)
+                return Json("Error");
+
+            db.ForrenKey.Remove(userName);
+
+            return Json("true");
+        }
 
 
 

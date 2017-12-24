@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using AgeOfTotalConquest.AOTC_DomainClasses;
+using AOTC_DomainClasses;
 
 namespace AgeOfTotalConquest.AOTC_DataLayer
 {
@@ -16,7 +17,8 @@ namespace AgeOfTotalConquest.AOTC_DataLayer
         public DbSet<UserBoost> UserBoosts { get; set; }
         public DbSet<UserReinforcement> UserReinforcements { get; set; }
         public DbSet<UserStat> UserStats { get; set; }
-        
+        public DbSet<UserUnits> UserUnits { get; set; }
+        public DbSet<ForrenKey> ForrenKey { get; set; }
 
         public AgeOfTotalConquestDB() : base()
         {

@@ -14,7 +14,6 @@ namespace AgeOfTotalConquest.Controllers
         // GET: Registration
         public ActionResult SignUp(string usernmame, string email, string password)
         {
-
             User u = new User { Username = usernmame, Email = email, Password = password };
             db.Users.AddOrUpdate(u);
             return View();
