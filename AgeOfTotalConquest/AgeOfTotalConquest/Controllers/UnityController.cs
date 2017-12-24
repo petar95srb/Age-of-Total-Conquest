@@ -138,18 +138,78 @@ namespace AgeOfTotalConquest.Controllers
 
         public JsonResult UserMessage(string id)
         {
-
+            //POSLATE PORUKE
             IQueryable<Message> msgs = db.Messages.Where(m => m.UserId.Equals(id));
-            msgs.OrderBy(m => m.Date, );
+            
+            
 
-            List<Message> MSGS = new List<Message>();
+            List<UnityClasses.Message> MSGS = new List<UnityClasses.Message>();
             foreach (Message m in msgs)
             {
-                MSGS.Add(m);
+                UnityClasses.Message msg = new UnityClasses.Message
+                {
+                    SenderId = m.UserId,
+                    ReceiverId = m.ReceiverId,
+                    Content = m.Body
+
+                };
+                MSGS.Add(msg);
+            }
+
+            //PRIMLJENE PORUKE
+            msgs = db.Messages.Where(m => m.ReceiverId.Equals(id));
+
+            foreach (Message m in msgs)
+            {
+                UnityClasses.Message msg = new UnityClasses.Message
+                {
+                    SenderId = m.UserId,
+                    ReceiverId = m.ReceiverId,
+                    Content = m.Body
+
+                };
+                MSGS.Add(msg);
             }
 
 
+
+
+
+
+            return Json(MSGS);
+
+
         }
+
+        public JsonResult UserFriendships(string id)
+        {
+            IQueryable<Friendship> fs = db.Friendships.Where(x => x.UserId.Equals(id));
+            List<UnityClasses.Friendship> FS = new List<UnityClasses.Friendship>();
+            foreach (Friendship f in fs)
+            {
+                UnityClasses.Friendship F = new UnityClasses.Friendship
+                {
+                    Id = f.Id,
+                    UserId = f.UserId,
+                    FriendId = f.FriendId,
+                    Date = f.Date
+                };
+
+
+                FS.Add(F);
+
+             }
+
+            return Json(FS);
+
+
+        }
+
+
+        
+
+
+
 
         
 

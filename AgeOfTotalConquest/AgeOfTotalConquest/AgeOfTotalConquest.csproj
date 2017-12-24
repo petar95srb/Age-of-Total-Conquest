@@ -168,6 +168,8 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnityClasses\Boost.cs" />
+    <Compile Include="UnityClasses\FriendRequest.cs" />
+    <Compile Include="UnityClasses\Friendship.cs" />
     <Compile Include="UnityClasses\Message.cs" />
     <Compile Include="UnityClasses\Reinforcement.cs" />
     <Compile Include="UnityClasses\Unit.cs" />
