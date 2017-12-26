@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using AgeOfTotalConquest.AOTC_DomainClasses;
 using AOTC_DomainClasses;
+using System.Data.Entity.Migrations;
 
 namespace AgeOfTotalConquest.Controllers
 {
@@ -193,6 +194,8 @@ namespace AgeOfTotalConquest.Controllers
                 };
 
 
+
+
                 FS.Add(F);
 
              }
@@ -232,11 +235,277 @@ namespace AgeOfTotalConquest.Controllers
             return Json("true");
         }
 
+        public JsonResult UpdateUserStat(UnityClasses.UserStat us, string id)
+        {
+            var user = db.ForrenKey.Find(id);
+
+            if (user == null)
+                return Json("Error");
+
+
+            User u  = db.Users.Find(us.UsernameId);
+            u.UserStat.Victories = us.Win;
+            u.UserStat.Losses = us.Loss;
+
+            db.Users.AddOrUpdate(u);
+
+            return Json(us);
+
+
+        }
+
+        public  JsonResult UserStat(string id)
+        {
+            UserStat us = db.UserStats.Find(id);
+
+            UnityClasses.UserStat US = new UnityClasses.UserStat
+            {
+                UsernameId = us.UsernameId,
+                Win = us.Victories,
+                Loss = us.Losses
+            };
+
+            return Json(us);
+        }
+
+
+        public JsonResult NewFriendship(UnityClasses.Friendship f)
+        {
+            var user = db.ForrenKey.Find(f.FriendId);
+
+            if (user == null)
+                return Json("Error");
+
+            User u1 = db.Users.Find(f.UserId);
+            User u2 = db.Users.Find(f.FriendId);
+
+            Friendship F1 = new Friendship
+            {
+                Id = f.Id,
+                Date=DateTime.Now,
+                UserId=f.UserId,
+                User = u1,
+                FriendId=f.FriendId,
+                Friend = u2
+                
+
+            };
+
+            Friendship F2 = new Friendship
+            {
+                Id = Guid.NewGuid(),
+                Date = DateTime.Now,
+                UserId = f.FriendId,
+                User = u2,
+                FriendId = f.UserId,
+                Friend = u1
+
+            };
+
+            db.Friendships.Add(F1);
+            db.Friendships.Add(F2);
+
+
+            return Json(f);
+
+
+        }
+
+        public JsonResult NewFriendRequest(UnityClasses.FriendRequest f)
+        {
+            var user = db.ForrenKey.Find(f.FriendId);
+
+            if (user == null)
+                return Json("Error");
+
+            User u1 = db.Users.Find(f.UserId);
+            User u2 = db.Users.Find(f.FriendId);
+
+            FriendRequest F1 = new FriendRequest
+            {
+                Id = f.Id,
+                Date = DateTime.Now,
+                UserId = f.UserId,
+                User = u1,
+                FriendId = f.FriendId,
+                Friend = u2
+
+
+            };
+
+      
+
+            db.FriendRequests.Add(F1);
+          
+
+
+            return Json(f);
+
+        }
+
+        public JsonResult NewMessage(UnityClasses.Message m, string id)
+        {
+            var user = db.ForrenKey.Find(m.SenderId);
+
+            if (user == null)
+                return Json("Error");
+
+            Message msg = new Message
+            {
+                Id = m.Id,
+                ReceiverId =m.ReceiverId,
+                Receiver = db.Users.Find(m.ReceiverId),
+                UserId = m.SenderId,
+                User = db.Users.Find(m.SenderId),
+                Body = m.Content,
+                Date=DateTime.Now,
+                IsRead = false
+
+            };
+            db.Messages.Add(msg);
+            return Json(m);
+        }
+
+
+        public JsonResult AddUserBoost(UnityClasses.UserBoost ub, string id)
+        {
+            var user = db.ForrenKey.Find(id);
+
+            if (user == null)
+                return Json("Error");
+
+            UserBoost UB = new UserBoost
+            {
+                Id = ub.Id,
+                BoostId = ub.BoostId,
+                Boost = db.Boosts.Find(ub.BoostId),
+                Username = ub.Username,
+                User = db.Users.Find(ub.Username)
+
+            };
+
+            db.UserBoosts.Add(UB);
+
+            return Json(ub);
+
+        }
+
+        public JsonResult AddUserReinforcement(UnityClasses.UserReinforcement ur , string id)
+        {
+            var user = db.ForrenKey.Find(id);
+
+            if (user == null)
+                return Json("Error");
+
+            UserReinforcement UR = new UserReinforcement
+            {
+                Id = Guid.NewGuid(),
+                ReinforcementId = ur.ReinforcementId,
+                Reinforcement = db.Reinforcements.Find(ur.ReinforcementId),
+                Username = ur.Username,
+                User = db.Users.Find(ur.Username)
+            };
+            db.UserReinforcements.Add(UR);
+
+            return Json(ur);
+
+
+        }
+
+        public JsonResult AddUserUnits(UnityClasses.UserUnit uu, string id)
+        {
+
+            var user = db.ForrenKey.Find(id);
+
+            if (user == null)
+                return Json("Error");
+
+            UserUnits u = new UserUnits
+            {
+                id = uu.id,
+                userName = uu.userName,
+                User = db.Users.Find(uu.userName),
+                Name = uu.Name,
+                Unit = db.Units.Find(uu.Name)
+            };
+
+            db.UserUnits.Add(u);
+            return Json(uu);
+                
+        }
+
+        public JsonResult RemoveUserBoost(Guid id, string username)
+        {
+            var user = db.ForrenKey.Find(username);
+
+            if (user == null)
+                return Json("Error");
+
+            UserBoost UB = db.UserBoosts.Find(id);
+
+            db.UserBoosts.Remove(UB);
+
+            return Json("Boost successfully removed!");
 
 
 
+        }
 
-        
+        public JsonResult RemoveUserReinforcement(Guid id, string username)
+        {
+            var user = db.ForrenKey.Find(username);
+
+            if (user == null)
+                return Json("Error");
+
+            UserReinforcement UB = db.UserReinforcements.Find(id);
+
+            db.UserReinforcements.Remove(UB);
+
+            return Json("Reinforcement successfully removed!");
+        }
+
+        public JsonResult RemoveUserUnit(int id, string username)
+        {
+            var user = db.ForrenKey.Find(username);
+
+            if (user == null)
+                return Json("Error");
+
+            UserUnits UB = db.UserUnits.Find(id);
+            db.UserUnits.Remove(UB);
+
+            return Json("Unit successfully removed!");
+        }
+
+        public JsonResult RemoveUserReinforcement(string id, string username)
+        {
+            var user = db.ForrenKey.Find(username);
+
+            if (user == null)
+                return Json("Error");
+
+            UserReinforcement UB = db.UserReinforcements.Find(id);
+
+            db.UserReinforcements.Remove(UB);
+
+            return Json("Reinforcement successfully removed!");
+        }
+
+        public JsonResult RemoveFriendRequest(Guid id, string username)
+        {
+            var user = db.ForrenKey.Find(username);
+
+            if (user == null)
+                return Json("Error");
+
+            FriendRequest UB = db.FriendRequests.Find(id);
+
+           db.FriendRequests.Remove(UB);
+
+            return Json("Success!");
+        }
+
 
 
 

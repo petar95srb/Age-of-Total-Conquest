@@ -7,6 +7,7 @@ namespace AgeOfTotalConquest.UnityClasses
 {
     public class UserStat
     {
+        public string UsernameId { get; set; }
         public int Win { get; set; }
         public int Loss { get; set; }
         public int Total { get { return Win + Loss; }}

@@ -179,6 +179,7 @@
     <Compile Include="UnityClasses\UserBoost.cs" />
     <Compile Include="UnityClasses\UserReinforcement.cs" />
     <Compile Include="UnityClasses\UserStat.cs" />
+    <Compile Include="UnityClasses\UserUnit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
