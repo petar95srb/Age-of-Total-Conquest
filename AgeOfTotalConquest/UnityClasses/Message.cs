@@ -11,5 +11,6 @@ namespace AgeOfTotalConquest.UnityClasses
         public String SenderId { get; set; }
         public String ReceiverId { get; set; }
         public String Content { get; set; }
+        public DateTime Date { get; set; }
     }
 }

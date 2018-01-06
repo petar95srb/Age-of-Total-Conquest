@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using AOTC_DomainClasses;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace AgeOfTotalConquest.AOTC_DomainClasses
@@ -31,6 +32,7 @@ namespace AgeOfTotalConquest.AOTC_DomainClasses
 
         public virtual ICollection<UserBoost>  UserBoosts  { get; set;}
         public virtual ICollection<UserReinforcement> UserReinforcements  { get; set; }
+        public virtual ICollection<UserUnits> UserUnits { get; set; }
 
        // public virtual ICollection<Message> Messages { get; set; }
         //public  virtual ICollection<User> Friends { get; set; }

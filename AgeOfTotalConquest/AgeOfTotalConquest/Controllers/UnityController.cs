@@ -234,6 +234,17 @@ namespace AgeOfTotalConquest.Controllers
 
             return Json("true");
         }
+		 [HttpGet]
+        public JsonResult GetUserAvatar(AgeOfTotalConquest.UnityClasses.ForrenKey key)
+        {
+            var userName = db.ForrenKey.Find(key.key);
+            if (userName == null)
+                return Json("Error");
+
+            var av=db.Users.Find(userName.userName);
+			
+            return Json(av.Avatar);
+        }
 
         public JsonResult UpdateUserStat(UnityClasses.UserStat us, string id)
         {

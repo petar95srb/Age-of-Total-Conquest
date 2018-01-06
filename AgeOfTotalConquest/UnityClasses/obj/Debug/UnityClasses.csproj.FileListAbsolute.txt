@@ -1,0 +1,6 @@
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\UnityClasses\bin\Debug\UnityClasses.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\UnityClasses\bin\Debug\UnityClasses.pdb
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\UnityClasses\obj\Debug\UnityClasses.csprojResolveAssemblyReference.cache
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\UnityClasses\obj\Debug\UnityClasses.csproj.CoreCompileInputs.cache
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\UnityClasses\obj\Debug\UnityClasses.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\UnityClasses\obj\Debug\UnityClasses.pdb

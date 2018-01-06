@@ -20,3 +20,5 @@ D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\
 D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.csproj.CoreCompileInputs.cache
 D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.dll
 D:\Projects\Git\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\obj\Debug\AOTC_DomainClasses.pdb
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\AutoMapper.dll
+C:\Users\Nikola\Desktop\AIPS_AOTC\Age-of-Total-Conquest\AgeOfTotalConquest\AOTC_DomainClasses\bin\Debug\AutoMapper.xml

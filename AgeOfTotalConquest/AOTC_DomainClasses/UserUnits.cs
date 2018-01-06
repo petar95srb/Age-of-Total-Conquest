@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AOTC_DomainClasses
+namespace AgeOfTotalConquest.AOTC_DomainClasses
 {
     public class UserUnits
     {
